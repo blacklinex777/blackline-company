@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09090c">
+<title>BLACKLINE COMPANY</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#09090c;color:#f4f1f2;font-family:Arial,sans-serif}
+header{padding:25px 20px;border-bottom:1px solid #292027}
+.logo{font-size:21px;font-weight:800;letter-spacing:3px}
+.logo span{color:#a52d48}
+.sub{color:#8f858a;font-size:11px;letter-spacing:2px;margin-top:7px}
+main{padding:22px 18px;max-width:700px;margin:auto}
+h1{font-size:25px;margin:12px 0 5px}
+.muted{color:#938990;font-size:13px}
+.status{display:inline-block;color:#d7a2ae;border:1px solid #633040;
+padding:7px 11px;border-radius:20px;font-size:11px;margin:18px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.card{background:#151217;border:1px solid #30232b;border-radius:13px;padding:17px}
+.card small{color:#9b8e95;font-size:12px}
+.card strong{display:block;font-size:25px;margin-top:12px}
+nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+nav button{background:#171318;border:1px solid #34242c;color:#eee;
+padding:15px 12px;border-radius:10px;text-align:left;font-size:14px}
+nav button:active{background:#512333}
+#view{margin-top:20px;background:#151217;border:1px solid #30232b;
+border-radius:13px;padding:18px;min-height:100px}
+footer{text-align:center;color:#665d62;font-size:10px;padding:30px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">BLACKLINE <span>COMPANY</span></div>
+  <div class="sub">MANAGEMENT SYSTEM</div>
+</header>
+<main>
+  <div class="status">● DEMO VERSION</div>
+  <h1>Панель управления</h1>
+  <div class="muted">Добро пожаловать в BLACKLINE COMPANY</div>
+
+  <div class="grid">
+    <div class="card"><small>Участники</small><strong>—</strong></div>
+    <div class="card"><small>Отчёты</small><strong>—</strong></div>
+    <div class="card"><small>Выплаты</small><strong>—</strong></div>
+    <div class="card"><small>Проверки</small><strong>—</strong></div>
+  </div>
+
+  <h3>Разделы системы</h3>
+  <nav>
+    <button onclick="show('Участники','Здесь будет реестр участников и их профили.')">♙ Участники</button>
+    <button onclick="show('Отчёты','Здесь будет список отчётов.')">▤ Отчёты</button>
+    <button onclick="show('Выплаты','Здесь будет учёт подтверждённых выплат.')">₽ Выплаты</button>
+    <button onclick="show('Проверки','Здесь будут запросы и результаты проверок.')">✓ Проверки</button>
+    <button onclick="show('Репутация','Здесь будут отзывы и история репутации.')">☆ Репутация</button>
+    <button onclick="show('Настройки','Настройки системы появятся здесь.')">⚙ Настройки</button>
+  </nav>
+
+  <section id="view">
+    <strong>Обзор системы</strong>
+    <p class="muted">Выбери раздел, чтобы посмотреть его.</p>
+  </section>
+</main>
+<footer>BLACKLINE COMPANY © 2026</footer>
+<script>
+function show(title,description){
+ document.getElementById('view').innerHTML=
+ '<strong>'+title+'</strong><p class="muted">'+description+'</p>';
+}
+</script>
+</body>
+</html>
